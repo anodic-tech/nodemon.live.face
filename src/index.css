@@ -1,0 +1,68 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@font-face { 
+  font-family: 'Krypton';
+  src: url('/fonts/MonaspaceKrypton-Regular.woff2') format('woff2');
+}
+
+:root {
+  font-family:'Krypton';
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000068;
+  background-color: rgb(22, 22, 31);
+}
+
+h1, h2, h3 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.87);
+}
+
+iframe { 
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  box-sizing: border-box;
+  /* height: 500px; */
+}
+
+form {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+}
+
+label, input {
+  margin-bottom: 0.5rem;
+}
+
+label {
+  font-size: 10px;
+}
+
+input {
+  font-family: 'Krypton';
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000068;
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+input[type="email"] {
+  height: 4rem;
+}
+
+input[type="submit"] {
+  background-color: #494949;
+}
+
+#form-response {
+  color: rgba(9, 192, 9, 0.97);
+}
+
+#form-response.error {
+  color: rgba(255, 0, 0, 0.975);
+}
