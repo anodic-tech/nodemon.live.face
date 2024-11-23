@@ -1,22 +1,19 @@
 import { SyntheticEvent } from "react"
-import { createRoot } from "react-dom/client"
 
-const IframeStyles = () => {
-    const css = `
-    #player {
-        max-height: 'fit-content'
-    }
+    const iframeCss = `
+        #player {
+            max-height: 'fit-content'
+        }
     `
-    return <style>{css}</style>
-}
 
 export const StreamEmbed = () => {
 
     const injectStyles = (e:SyntheticEvent<HTMLIFrameElement, Event>) =>{
         const iframe = e.target as HTMLIFrameElement
         if(!iframe?.contentDocument?.head) return
-        const root = createRoot(iframe.contentDocument.head)
-        root.render(<IframeStyles/>);
+        const style = document.createElement('script')
+        style.append(iframeCss)
+        iframe.contentDocument.head.appendChild(style)
     }
 
     return <iframe
