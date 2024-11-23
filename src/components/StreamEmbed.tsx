@@ -20,6 +20,7 @@ import { SyntheticEvent } from "react"
             font-size: 0;
         }   
         .OfflineEmbed_pageName__9lEC_:before {
+            font-family: 'Krypton';
             font-size: 1.5rem;
             content: "Stream offline";
         }
