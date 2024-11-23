@@ -2,7 +2,7 @@ import { SyntheticEvent } from "react"
 
     const iframeCss = `
         #player {
-            max-height: 'fit-content'
+            max-height: fit-content
         }
     `
 
