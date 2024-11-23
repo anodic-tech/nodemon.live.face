@@ -11,7 +11,7 @@ export const StreamEmbed = () => {
     const injectStyles = (e:SyntheticEvent<HTMLIFrameElement, Event>) =>{
         const iframe = e.target as HTMLIFrameElement
         if(!iframe?.contentDocument?.head) return
-        const style = document.createElement('script')
+        const style = document.createElement('style')
         style.append(iframeCss)
         iframe.contentDocument.head.appendChild(style)
     }
